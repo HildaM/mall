@@ -42,6 +42,7 @@
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.quan.mall.mbg.mapper"
                              targetProject="src/main/java"/>
 
+<!--   以下指定生成哪个数据库表的代码     -->
         <!--生成全部表tableName设为%-->
         <table tableName="pms_brand">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>

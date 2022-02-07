@@ -5,6 +5,7 @@ import com.quan.mall.mbg.mapper.PmsBrandMapper;
 import com.quan.mall.mbg.model.PmsBrand;
 import com.quan.mall.mbg.model.PmsBrandExample;
 import com.quan.mall.service.PmsBrandService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -53,6 +54,25 @@ public class PmsBrandServiceImpl implements PmsBrandService {
     @Override
     public PmsBrand getBrand(Long id) {
         return brandMapper.selectByPrimaryKey(id);
+    }
+
+
+    // 自己写的测试
+    @Override
+    public List<PmsBrand> testList(int pageNum, int pageSize, String name) {
+        PageHelper.startPage(pageNum, pageSize);
+        // 生成条件类
+        PmsBrandExample pmsBrandExample = new PmsBrandExample();
+        // 传条件的主要类
+        PmsBrandExample.Criteria criteria = pmsBrandExample.createCriteria();
+
+        // 数据判定
+        if (!StringUtils.isNotEmpty(name)) {
+            criteria.andNameEqualTo(name);
+        }
+
+        // 执行指定的sql
+        return brandMapper.selectByExample(pmsBrandExample);
     }
 }
 

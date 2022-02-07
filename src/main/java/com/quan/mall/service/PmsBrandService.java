@@ -24,5 +24,8 @@ public interface PmsBrandService {
 
     List<PmsBrand> listBrand(int pageNum, int pageSize);
 
+    // 测试接口
+    List<PmsBrand> testList(int pageNum, int pageSize, String name);
+
     PmsBrand getBrand(Long id);
 }
