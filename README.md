@@ -9,4 +9,4 @@
    2. 整合swagger-ui，最新版的swagger与springboot2.6.3不兼容，只能将其降为2.5.6，或者换为springdoc；我选择降版本。
 4. 2022-02-14：
    1. 整合Redis，实现电话号码验证码获取与检验
-   2. 学习整合SpringSecurity
+   2. 学习整合SpringSecurity和JWT，实现认证和授权。（尚未完成）

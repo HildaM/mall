@@ -95,6 +95,28 @@
             <version>2.11.1</version>
         </dependency>
 
+        <!--  SpringSecurity  -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <version>2.6.3</version>
+        </dependency>
+
+        <!--   Hutool java工具包     -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.7.20</version>
+        </dependency>
+
+
+        <!--   JWT登录支持     -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
+        </dependency>
+
 
 
 
