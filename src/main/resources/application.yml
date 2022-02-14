@@ -8,8 +8,8 @@ spring:
     password: 22222l22222123
 
   redis:
-    host: 120.25.153.110
-    password: 22222l22222123
+    host:
+    password:
     port: 6379
     database: 1     # 0号数据库用来日常学习
     timeout: 3000ms # 连接超时时间
