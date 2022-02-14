@@ -7,8 +7,22 @@ spring:
     username: HildaData
     password: 22222l22222123
 
+  redis:
+    host: 120.25.153.110
+    password: 22222l22222123
+    port: 6379
+    database: 1     # 0号数据库用来日常学习
+    timeout: 3000ms # 连接超时时间
+
 mybatis:
   mapper-locations:
     - classpath:mapper/*.xml
     - classpath:com/**/mapper/.xml
 
+# 自定义redis key
+redis:
+  key:
+    prefix:
+      authCode: "portal:authCode:"
+    expire:
+      authCode: 120   # 验证码超时时间
