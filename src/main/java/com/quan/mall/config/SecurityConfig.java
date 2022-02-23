@@ -61,12 +61,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/**/*.js",
                         "/swagger-resources/**",
                         "/v2/api-docs/**"
-                )
-                .permitAll()
+                ).permitAll()
                 .antMatchers("/admin/login", "/admin/register")  // 对登录注册要允许匿名访问
-                .permitAll()
+                    .permitAll()
                 .anyRequest()   // 除上面外的所有请求全部需要鉴权访问
-                .authenticated();
+                    .authenticated();
 
         // 禁用缓存
         http.headers().cacheControl();

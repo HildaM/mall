@@ -27,6 +27,15 @@ public class AdminUserDetails implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+        // 等价于：
+        // 把permission中的String类型的权限信息封装成SimpleGrantedAuthority对象
+//        List<GrantedAuthority> authorities = new ArrayList<>();
+//        for (String permission : permissions) {
+//            SimpleGrantedAuthority authority = new SimpleGrantedAuthority(permission);
+//            authorities.add(authority);
+//        }
+//        return authorities;
+
         // 返回当前用户的权限
         return permissionList.stream()
                 .filter(permission -> permission.getValue() != null)

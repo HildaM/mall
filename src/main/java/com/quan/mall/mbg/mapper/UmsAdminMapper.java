@@ -4,11 +4,8 @@ import com.quan.mall.mbg.model.UmsAdmin;
 import com.quan.mall.mbg.model.UmsAdminExample;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.List;
-
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-@Mapper
 public interface UmsAdminMapper {
     long countByExample(UmsAdminExample example);
 
